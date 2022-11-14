@@ -42,3 +42,16 @@ It contains the following data fields:
 Now the fields themselves might look confusing to you. But they themselves do not matter as much as the principle they follow: They are ***clearly defined***. To be able to correctly read the chat message, the sender and the receiver of the packet have to know the same definition of this packet.  
 
 
+### What the server does
+The server itself is handling everything that happens in the game. As such, it handles:
+- Vanilla Behaviour
+- Terrain Generation & Population
+- Player input/movement handling
+- World Events
+- Anything plugins might do
+
+This is quite a heavy bunch of workloads for servers to handle. Generally, servers are not able to handle an unlimited amount of players, due to hardware constraints: Any computer only has so much compute power.
+
+### Summary
+So what is a server? A server accepts traffic for multiple players and handles the actions they perform
+
