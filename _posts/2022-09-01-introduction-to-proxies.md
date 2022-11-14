@@ -102,4 +102,4 @@ I've tried to talk about some of the interesting things about proxies here, howe
 
 The TL;DR is: Proxies are very useful pieces of software that allowed Minecraft to grow way past what it was initially capable of.
 
-A good example of an open source proxy is (WaterdogPE)[https://waterdog.dev].
+A good example of an open source proxy is [WaterdogPE](https://waterdog.dev).
