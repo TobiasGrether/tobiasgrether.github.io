@@ -49,7 +49,7 @@ We can now tell Cloudflare using their Private Network Configuration for Tunnels
 
 After that, without any rules, we can already access the IPs from the kubernetes cluster on our local devices. A simple
 
-´´´bash
+```bash
 curl http://10.103.99.169:8080/health
 ```
 
