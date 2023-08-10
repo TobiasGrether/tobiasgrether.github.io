@@ -1,4 +1,6 @@
-# Introduction
+# Cloudflare Gateway as a zero-trust corporate VPN
+
+## Introduction
 Security is a challenge of its own, especially with developers that work from remote locations all over the planet.
 At NetherGames, we faced the issue of having a kubernetes cluster that contained development and production components, but no safe way to let developers access it.
 
@@ -46,6 +48,7 @@ Putting two and two together, we can bridge the gap and connect everything.
 We can now tell Cloudflare using their Private Network Configuration for Tunnels that there are certain ip ranges that we want to bridge from the kubernetes cluster tunnel to all our clients, in our case the kubernetes pod and service CIDRs.
 
 After that, without any rules, we can already access the IPs from the kubernetes cluster on our local devices. A simple
+
 ´´´bash
 curl http://10.103.99.169:8080/health
 ```
