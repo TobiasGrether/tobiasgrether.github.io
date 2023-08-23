@@ -17,7 +17,7 @@ Recently, Microsofts private key has apparently been compromised, where and how 
 When the private key changes, so does the public key.
 
 ### The big issue
-All client versions have the private key contained inside the game code. This is used, as explained above, to validate the integrity of the player data. That is an issue because that means the client will try to validate data signed with the new private key with the old public key, which will fail and thus cause the client to treat the (correct) data it receives from Microsofts Authentication service as invalid or untrusted, thus not logging you in. 
+All client versions have the public key contained inside the game code. This is used, as explained above, to validate the integrity of the player data. That is an issue because that means the client will try to validate data signed with the new private key with the old public key, which will fail and thus cause the client to treat the (correct) data it receives from Microsofts Authentication service as invalid or untrusted, thus not logging you in. 
 Because the client doesn't think its logged in, it will also not send your player data to the servers, which means they think you are not actually logged into Xbox Live. 
 
 That all leads to all clients pre-1.20 not being able to join any Minecraft Server that has XBOX authentication available.
@@ -28,6 +28,3 @@ However, a lot of players, especially from the Bedrock PvP community have been u
 
 ### TL;DR
 Microsoft permanently broke all pre-1.20 bedrock clients unless they are reverting to the old private key, which would be a massive security risk and is not likely to happen. There is nothing any server can do about this.
-
-## The technical part
-Microsofts authentication service relies on JWTs. When you request authentication data from their servicex 
