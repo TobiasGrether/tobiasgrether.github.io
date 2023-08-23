@@ -7,7 +7,7 @@ Whenever you want to play on online servers in Minecraft, you have to authentica
 This data is also passed on directly to the servers that the player connects to later. 
 
 To make sure that the data the clients send to the server and the client receives itself is authentic, Microsoft uses something called a JWT. Its a programmatic standard to present data in a way where it can be made sure that data you receive is originating from a certain (trusted) source. This works with clever math which I'm not going to explain here.
-THe short version of it is: There are two values, a private key and a public key. The private key is, as the name implies, private. Only Microsoft has it. The public key however can be shared in whatever way you want without any issue. 
+The short version of it is: There are two values, a private key and a public key. The private key is, as the name implies, private. Only Microsoft has it. The public key however can be shared in whatever way you want without any issue. 
 The Private Key is able to mathematically sign data, and the public key is later able to verify that data was previously signed using the private key. This also means that anyone who has the private key will be able to create trusted data.
 
 Minecraft uses this by signing the data from the authentication service using their private key, and the client as well as third-party servers use the public key to validate that the data is indeed from Microsoft and not forged or otherwise manipulated.
@@ -28,3 +28,6 @@ However, a lot of players, especially from the Bedrock PvP community have been u
 
 ### TL;DR
 Microsoft permanently broke all pre-1.20 bedrock clients unless they are reverting to the old private key, which would be a massive security risk and is not likely to happen. There is nothing any server can do about this.
+
+## The technical part
+Microsofts authentication service relies on JWTs. When you request authentication data from their servicex 
